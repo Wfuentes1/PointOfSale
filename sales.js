@@ -1,5 +1,6 @@
 var runningTotal = 0.0;
-
+ document.getElementById("runningTotal").innerHTML= runningTotal + " " +newItem
+var dollars
 function addItem()
 {
   var newItem;
@@ -7,6 +8,13 @@ function addItem()
   if (isNaN(newItem)){
   alert("Enter price as a number");
   }
+  else{
+    newItem = Number(newItem);
+    document.getElementById("runningTotal").innerHTML= runningTotal + " " +newItem
+   var dollars = asCurrency(runningTotal);
+   document.getElementById("subtotal").innerHTML= dollars
+   document.getElementById("price").value;
+
   //IF newItem is not a number
   // THEN show an alert: "Enter price as a number"
   //OTHERWISE,
@@ -26,7 +34,7 @@ function asCurrency(val)
 }
 
 //courtesy of w3schools, from: http://www.w3schools.com/js/js_cookies.asp
-function setCookie(cname, cvalue, exdays) {
+function setCookie(preTax, runningTotal, 2) {
     var d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     var expires = "expires="+d.toUTCString();
