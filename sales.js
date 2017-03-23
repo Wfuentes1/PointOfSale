@@ -9,13 +9,13 @@ function addItem()
   }
   else{
     newItem = Number(newItem);
-    document.getElementById("runningTotal").innerHTML= runningTotal + " " +newItem
+    document.getElementById("subtotal").innerHTML= runningTotal + " " +newItem;
    var dollars = asCurrency(runningTotal);
    document.getElementById("subtotal").innerHTML= dollars;
    document.getElementById("price").value = "";
    setCookie("preTax", runningTotal);
  }
-
+}
   //IF newItem is not a number
   // THEN show an alert: "Enter price as a number"
   //OTHERWISE,
@@ -26,7 +26,7 @@ function addItem()
   // update the innerHTML of the span with the id "subtotal" to be dollars
   // update the value of the input with the id "price" to be an empty string
   // update a cookie called "preTax" with the value of runningTotal
-}
+
 
 //takes a number and gives a string with the number displayed as USD currency
 function asCurrency(val)
