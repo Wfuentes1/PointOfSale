@@ -55,4 +55,10 @@ function getCookie(cname) {
         }
     }
     return "";
+    function calculateReceipt
+    var receiptSubtotal;
+    {
+      getCookie(preTax)
+      preTax=NUmber(receiptSubtotal);
+    }
 }
